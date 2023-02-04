@@ -25,15 +25,23 @@ class HatViewModel : ViewModel() {
     val isLoading: LiveData<Boolean>
         get() = _isLoading
 
-    fun getFacultyName(name: String, surname: String) {
+    private val _username = MutableLiveData<String>()
+    val username: LiveData<String>
+        get() = _username
+
+    fun applyUserName(name: String) {
+        _username.value = name
+    }
+
+    fun getFacultyName() {
         viewModelScope.launch {
             _isLoading.postValue(true)
             withContext(Dispatchers.IO) {
-                delay(5000)
+                delay(2000)
                 _facultyName.postValue(
-                    generateFaculty.generateFaculty(name = name,
-                        surname = surname).name
-                )
+                    generateFaculty.generateFaculty(
+                        userName = _username.value ?: "").name
+                    )
                 _isLoading.postValue(false)
 
             }

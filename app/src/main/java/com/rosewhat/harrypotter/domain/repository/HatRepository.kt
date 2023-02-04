@@ -4,5 +4,5 @@ import com.rosewhat.harrypotter.domain.models.Faculty
 
 interface HatRepository {
 
-    suspend fun generateFaculty(name: String, surname: String) : Faculty
+    suspend fun generateFaculty(userName: String) : Faculty
 }

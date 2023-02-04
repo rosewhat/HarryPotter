@@ -5,4 +5,12 @@
     <string name="title_notifications">Notifications</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="welcome_title">Добро пожаловать в школу магии и волшебства - Хогвартс</string>
+    <string name="welcome_subtitle">Наденьте распорядительную шляпу</string>
+    <string name="welcome_name_hint">Name and Surname</string>
+    <string name="welcome_image">Hat</string>
+    <string name="welcome_select_faculty">Распределить</string>
+    <string name="welcome_selected">Поздравляем! Ваш факультет [faculty_name]</string>
+    <string name="welcome_selecting">Распределяю...</string>
+    <string name="welcome_next">Зайти в школу</string>
 </resources>

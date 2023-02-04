@@ -5,8 +5,8 @@ import com.rosewhat.harrypotter.domain.repository.HatRepository
 import com.rosewhat.harrypotter.ui.hat.HatViewModel
 
 class HatRepositoryImpl : HatRepository {
-    override suspend fun generateFaculty(name: String, surname: String): Faculty {
-        return if (name == "Harry" && surname == "Potter") {
+    override suspend fun generateFaculty(userName: String): Faculty {
+        return if (userName == "Harry Potter") {
             Faculty(name = FACULTY_GRYFFINDOR)
         } else {
             Faculty(name = FACULTY_SLYTHERIN)
